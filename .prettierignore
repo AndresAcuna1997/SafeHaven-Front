@@ -4,3 +4,10 @@ out
 dist
 coverage
 eslint.config.mjs
+.prettierrc
+.vscode
+next.config.ts
+eslint.config.mjs
+postcss.config.mjs
+pnpm-lock.yaml
+package.json
