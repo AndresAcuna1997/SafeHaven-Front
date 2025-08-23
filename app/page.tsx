@@ -1,103 +1,67 @@
-import Image from 'next/image';
+import { Petcard } from '@/components/Petcard/Petcard';
+import { Button } from '@/components/ui/button';
+
+import { ArrowDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="home-background flex justify-center items-center text-center relative px-64">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="z-10">
+          <h1 className="font-poppins text-5xl font-extrabold mb-4 text-white">
+            Ayuda a un animal a encontrar un nuevo hogar
+          </h1>
+          <p className="font-inter text-white">
+            Aqui puedes encontrar un peludo en cual te amara
+          </p>
+          <Button className="bg-blue-600 rounded-full cursor-pointer animate-bounce size-12 absolute bottom-3">
+            <Link href="#pets-cards">
+              <ArrowDown className="text-white text-2xl size-7" />
+            </Link>
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+
+      <section id="pets-cards" className="px-64 mt-10 bg-gray-100">
+        <h2 className="text-center text-3xl md:text-4xl font-poppins font-semibold text-blue-600">
+          Conoce a tu futuro amigo
+        </h2>
+        <div className="flex justify-around mt-5">
+          <Petcard
+            name="Cafe"
+            age={3}
+            location="Bogota"
+            photo="/images/pets-fallback/dog.jpg"
+            description="Soy un perro muy bonito y cari;oso"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+
+          <Petcard
+            name="Coco"
+            age={6}
+            location="Cali"
+            photo="/images/pets-fallback/cat.jpg"
+            description="Gato calmado y cari;oso"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+
+          <Petcard
+            name="Luna"
+            age={10}
+            location="Medellin"
+            photo="/images/pets-fallback/cacatua.jpg"
+            description="Gato calmado y cari;oso"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+          <Petcard
+            name="Frijol"
+            age={1}
+            location="Cartagena"
+            photo="/images/pets-fallback/guinea.jpg"
+            description="Gato calmado y cari;oso"
+          />
+        </div>
+      </section>
+    </>
   );
 }
