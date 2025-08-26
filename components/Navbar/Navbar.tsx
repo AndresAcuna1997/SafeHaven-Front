@@ -10,15 +10,15 @@ import { usePathname } from 'next/navigation';
 const navItems = [
   {
     href: '/',
-    text: 'Inicio',
+    text: 'Home',
   },
   {
     href: '/pets',
-    text: 'Mascotas',
+    text: 'Pets',
   },
   {
     href: '/form-post',
-    text: 'Publicar',
+    text: 'Post',
   },
 ];
 
