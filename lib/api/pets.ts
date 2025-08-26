@@ -1,13 +1,4 @@
-export interface Pet {
-  id: number;
-  name: string;
-  age: number;
-  ageType: 'Years' | 'Months';
-  description: string;
-  location: string;
-  photo: string;
-  petType: string;
-}
+import { Pet } from '@/types/pet';
 
 export const fetchPets = async (
   age: string,
@@ -22,7 +13,7 @@ export const fetchPets = async (
     throw new Error('Failed to fetch pets');
   }
 
-  const data = await response.json();
+  const data: { pets: Pet[] } = await response.json();
   let filteredPets = data.pets;
 
   if (city && city !== 'All') {
