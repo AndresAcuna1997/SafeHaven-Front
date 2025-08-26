@@ -1,0 +1,184 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Cafe",
+      "age": 3,
+      "ageType": "Years",
+      "description": "A very beautiful and loving dog who enjoys playing fetch and long walks in the park",
+      "location": "Bogotá",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "age": 8,
+      "ageType": "Months",
+      "description": "Calm and affectionate cat who loves to cuddle and purr on sunny afternoons",
+      "location": "Medellín",
+      "photo": "/images/pets-fallback/cat.jpg",
+      "petType": "Cats"
+    },
+    {
+      "id": 3,
+      "name": "Coco",
+      "age": 2,
+      "ageType": "Years",
+      "description": "Playful and intelligent cockatoo who can mimic sounds and loves social interaction",
+      "location": "Cali",
+      "photo": "/images/pets-fallback/cacatua.jpg",
+      "petType": "Birds"
+    },
+    {
+      "id": 4,
+      "name": "Frijol",
+      "age": 1,
+      "ageType": "Years",
+      "description": "Gentle guinea pig who enjoys eating fresh vegetables and exploring new spaces",
+      "location": "Cartagena",
+      "photo": "/images/pets-fallback/guinea.jpg",
+      "petType": "Rodents"
+    },
+    {
+      "id": 5,
+      "name": "Max",
+      "age": 5,
+      "ageType": "Years",
+      "description": "Energetic dog who loves running and playing with children in the backyard",
+      "location": "Barranquilla",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    },
+    {
+      "id": 6,
+      "name": "Mia",
+      "age": 6,
+      "ageType": "Months",
+      "description": "Sweet kitten who is learning to use the litter box and loves chasing toys",
+      "location": "Bucaramanga",
+      "photo": "/images/pets-fallback/cat.jpg",
+      "petType": "Cats"
+    },
+    {
+      "id": 7,
+      "name": "Rocky",
+      "age": 7,
+      "ageType": "Years",
+      "description": "Loyal and protective dog who has been well-trained and gets along with other pets",
+      "location": "Cúcuta",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    },
+    {
+      "id": 8,
+      "name": "Bella",
+      "age": 4,
+      "ageType": "Years",
+      "description": "Independent cat who enjoys sunbathing by the window and occasional head scratches",
+      "location": "Ibagué",
+      "photo": "/images/pets-fallback/cat.jpg",
+      "petType": "Cats"
+    },
+    {
+      "id": 9,
+      "name": "Kiwi",
+      "age": 3,
+      "ageType": "Years",
+      "description": "Colorful and talkative bird who can learn new words and loves singing in the morning",
+      "location": "Manizales",
+      "photo": "/images/pets-fallback/cacatua.jpg",
+      "petType": "Birds"
+    },
+    {
+      "id": 10,
+      "name": "Pepito",
+      "age": 11,
+      "ageType": "Months",
+      "description": "Curious guinea pig who loves exploring tunnels and eating fresh carrots",
+      "location": "Pereira",
+      "photo": "/images/pets-fallback/guinea.jpg",
+      "petType": "Rodents"
+    },
+    {
+      "id": 11,
+      "name": "Charlie",
+      "age": 2,
+      "ageType": "Years",
+      "description": "Friendly dog who gets excited about meeting new people and loves belly rubs",
+      "location": "Bogotá",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    },
+    {
+      "id": 12,
+      "name": "Shadow",
+      "age": 8,
+      "ageType": "Years",
+      "description": "Wise and calm cat who has lived a good life and enjoys quiet moments",
+      "location": "Medellín",
+      "photo": "/images/pets-fallback/cat.jpg",
+      "petType": "Cats"
+    },
+    {
+      "id": 13,
+      "name": "Rio",
+      "age": 1,
+      "ageType": "Years",
+      "description": "Young and vibrant bird who is just learning to fly and loves fresh fruits",
+      "location": "Cali",
+      "photo": "/images/pets-fallback/cacatua.jpg",
+      "petType": "Birds"
+    },
+    {
+      "id": 14,
+      "name": "Buddy",
+      "age": 6,
+      "ageType": "Years",
+      "description": "Gentle giant dog who despite his size is very careful with small children",
+      "location": "Cartagena",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    },
+    {
+      "id": 15,
+      "name": "Whiskers",
+      "age": 3,
+      "ageType": "Months",
+      "description": "Tiny kitten with distinctive whiskers who loves to climb and explore high places",
+      "location": "Barranquilla",
+      "photo": "/images/pets-fallback/cat.jpg",
+      "petType": "Cats"
+    },
+    {
+      "id": 16,
+      "name": "Peanut",
+      "age": 2,
+      "ageType": "Years",
+      "description": "Small but brave guinea pig who loves to popcorn jump when excited",
+      "location": "Bucaramanga",
+      "photo": "/images/pets-fallback/guinea.jpg",
+      "petType": "Rodents"
+    },
+    {
+      "id": 17,
+      "name": "Sky",
+      "age": 4,
+      "ageType": "Years",
+      "description": "Beautiful bird with stunning plumage who enjoys perching by open windows",
+      "location": "Cúcuta",
+      "photo": "/images/pets-fallback/cacatua.jpg",
+      "petType": "Birds"
+    },
+    {
+      "id": 18,
+      "name": "Duke",
+      "age": 9,
+      "ageType": "Years",
+      "description": "Senior dog who is still playful and loves shorter walks and cozy naps",
+      "location": "Ibagué",
+      "photo": "/images/pets-fallback/dog.jpg",
+      "petType": "Dogs"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
+import TanstackProvider from '@/providers/TanstackProvider';
 import type { Metadata } from 'next';
 import { Delius_Unicase, Inter, Poppins } from 'next/font/google';
 import './globals.css';
@@ -36,9 +37,16 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${inter.variable} ${delius.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <TanstackProvider>
+          <Navbar />
+          <div
+            id="equisde"
+            className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64"
+          >
+            {children}
+          </div>
+          <Footer />
+        </TanstackProvider>
       </body>
     </html>
   );
