@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Card,
   CardContent,
@@ -5,10 +7,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { fetchPetDetails } from '@/lib/api/petDetails';
+import { useQueryClient } from '@tanstack/react-query';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '../ui/button';
 
 interface Props {
+  id: number;
   name: string;
   age: number;
   ageType: 'Years' | 'Months';
@@ -18,6 +24,7 @@ interface Props {
 }
 
 export const Petcard = ({
+  id,
   name,
   age,
   ageType,
@@ -25,6 +32,8 @@ export const Petcard = ({
   location,
   photo,
 }: Props) => {
+  const queryClient = useQueryClient();
+
   return (
     <Card className="w-72 bg-white" role="article">
       <CardHeader>
@@ -45,7 +54,17 @@ export const Petcard = ({
       </CardContent>
       <CardFooter className="flex justify-center">
         <Button className="bg-blue-600 text-white hover:bg-blue-900 cursor-pointer">
-          Adopt me!
+          <Link
+            href={`/pet/${id}`}
+            onMouseEnter={() => {
+              queryClient.prefetchQuery({
+                queryKey: ['pet-details', id],
+                queryFn: () => fetchPetDetails(id),
+              });
+            }}
+          >
+            Adopt me!
+          </Link>
         </Button>
       </CardFooter>
     </Card>
