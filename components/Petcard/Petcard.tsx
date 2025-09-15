@@ -38,7 +38,12 @@ export const Petcard = ({
     <Card className="w-72 bg-white" role="article">
       <CardHeader>
         <div className="w-full aspect-square relative">
-          <Image src={photo} alt="" fill className="object-cover" />
+          <Image
+            src={photo}
+            alt="Image of the pet"
+            fill
+            className="object-cover"
+          />
         </div>
         <CardTitle className="mt-3">
           <span className="border-b bg-gray-50">

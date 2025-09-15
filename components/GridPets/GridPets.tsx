@@ -113,4 +113,5 @@ const GridPets = () => {
     </div>
   );
 };
+
 export default GridPets;

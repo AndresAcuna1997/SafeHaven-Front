@@ -15,7 +15,7 @@ const eslintConfig = [
   prettier,
   {
     rules: {
-      "no-console": "error",
+      "no-console": "warn",
     },
   },
 ];

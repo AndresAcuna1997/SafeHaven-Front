@@ -1,8 +1,10 @@
+import { ageType } from './enum/ageType';
+
 export interface Pet {
   id: number;
   name: string;
   age: number;
-  ageType: 'Years' | 'Months';
+  ageType: ageType;
   description: string;
   location: string;
   photo: string;

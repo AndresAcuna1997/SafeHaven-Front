@@ -1,12 +1,18 @@
 import { Petcard } from '@/components/Petcard/Petcard';
 import { Button } from '@/components/ui/button';
+import { Pet } from '@/types/pet';
 
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch('http://localhost:3000/data/pets.json');
+  const { pets } = await res.json();
+
+  const initialPets = pets.slice(0, 4);
+
   return (
-    <main className="bg-gray-100">
+    <main>
       <section className="home-background flex justify-center items-center text-center relative px-64">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="z-10">
@@ -28,41 +34,18 @@ export default function Home() {
           Meet your future friend
         </h2>
         <div className="flex justify-around mt-5">
-          <Petcard
-            name="Cafe"
-            age={3}
-            ageType="Months"
-            location="Bogota"
-            photo="/images/pets-fallback/dog.jpg"
-            description="I'm a very beautiful and loving dog"
-          />
-
-          <Petcard
-            name="Coco"
-            age={6}
-            ageType="Years"
-            location="Cali"
-            photo="/images/pets-fallback/cat.jpg"
-            description="Calm and loving cat"
-          />
-
-          <Petcard
-            name="Luna"
-            age={10}
-            ageType="Years"
-            location="Medellin"
-            photo="/images/pets-fallback/cacatua.jpg"
-            description="Calm and loving cockatoo with a gentle personality"
-          />
-
-          <Petcard
-            name="Frijol"
-            age={1}
-            ageType="Years"
-            location="Cartagena"
-            photo="/images/pets-fallback/guinea.jpg"
-            description="Calm and loving guinea pig"
-          />
+          {initialPets.map((pet: Pet) => (
+            <Petcard
+              key={pet.id}
+              id={pet.id}
+              name={pet.name}
+              age={pet.age}
+              ageType={pet.ageType}
+              location={pet.location}
+              photo={pet.photo}
+              description={pet.description}
+            />
+          ))}
         </div>
       </section>
     </main>

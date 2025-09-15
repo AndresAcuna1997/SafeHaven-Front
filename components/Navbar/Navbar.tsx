@@ -17,7 +17,7 @@ const navItems = [
     text: 'Pets',
   },
   {
-    href: '/form-post',
+    href: '/post',
     text: 'Post',
   },
 ];

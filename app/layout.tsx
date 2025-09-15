@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${inter.variable} ${delius.variable} antialiased`}
+        className={`${poppins.variable} ${inter.variable} ${delius.variable} antialiased bg-gray-100`}
       >
         <TanstackProvider>
           <Navbar />
