@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 export default async function Home() {
   const res = await fetch('http://localhost:3000/data/pets.json');
+
   const { pets } = await res.json();
   const initialPets = pets.slice(0, 4);
 

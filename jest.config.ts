@@ -17,6 +17,7 @@ const config: Config = {
     // Ignore
     '!<rootDir>/lib/data/**',
     '!<rootDir>/lib/utils.ts',
+    '!<rootDir>/lib/auth0.ts',
     '!<rootDir>/components/ui/*.{ts,tsx}',
     '!<rootDir>/lib/api/*.{ts,tsx}',
   ],

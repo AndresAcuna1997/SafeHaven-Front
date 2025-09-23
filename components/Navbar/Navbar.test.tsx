@@ -6,6 +6,14 @@ jest.mock('next/navigation', () => ({
   usePathname: jest.fn(),
 }));
 
+jest.mock('@auth0/nextjs-auth0', () => ({
+  useUser: () => ({
+    user: { name: 'Test User', email: 'test@example.com' },
+    isLoading: false,
+    error: null,
+  }),
+}));
+
 import { usePathname } from 'next/navigation';
 
 const mockUsePathname = usePathname as jest.MockedFunction<typeof usePathname>;
@@ -28,7 +36,7 @@ describe('Navbar tests', () => {
   });
 
   it('should render 3 links inside the nav', () => {
-    const numberOfLinks = 3;
+    const numberOfLinks = 4;
 
     render(<Navbar />);
 
