@@ -49,6 +49,15 @@ export const Petcard = ({
           <span className="border-b bg-gray-50">
             {name} - {age} {ageType}
           </span>
+          <button
+            type="button"
+            onClick={() => {
+              throw new Error('Sentry Test Error');
+            }}
+          >
+            Break the world
+          </button>
+          ;
         </CardTitle>
       </CardHeader>
       <CardContent>
